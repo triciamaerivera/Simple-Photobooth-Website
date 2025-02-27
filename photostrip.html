@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+  <title>Photostrip</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="photostrip">
+  <!-- Back Button -->
+  <button class="back-button">← Back</button>
+
+  <div class="container">
+    <!-- Left: Photostrip -->
+    <div class="photostrip-container">
+      <div class="photostrip" id="strip">
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+
+    <!-- Right: Controls -->
+    <div class="controls-container">
+      <button onclick="applyFilter('grayscale')">Grayscale</button>
+      <button onclick="applyFilter('sepia')">Sepia</button>
+      <button onclick="applyFilter('none')">Reset</button>
+      <button id="saveButton">Save Photostrip</button>
+
+      <div class="filters">
+        <h2><label for="frameColor">Frame Color:</label></h2>
+        <input type="color" id="frameColor" value="#ffffff">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

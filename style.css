@@ -1,0 +1,228 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("bg.png") !important;
+}
+
+
+/* ---------- Styles for Photobooth ---------- */
+body.photobooth {
+  text-align: center;
+  position: relative;
+}
+
+body.photobooth h1 {
+  margin-top: 40px;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+#video {
+  display: block;
+  margin: 20px auto;
+  width: 800px;
+  height: auto;
+  border: 8px solid #f5f5f5;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+#startCapture {
+  display: block;
+  margin: 15px auto;
+  padding: 15px 30px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background: #ff4081;
+  color: white;
+  border-radius: 8px;
+  transition: 0.3s;
+  position: relative;
+  z-index: 10001;
+}
+
+#startCapture:hover {
+  background: #e91e63;
+}
+
+#countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px 10px black;
+  display: none;
+  z-index: 2;
+}
+
+.flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  z-index: 1000;
+}
+
+/* ---------- Styles for Photostrip ---------- */
+body.photostrip {
+  text-align: center;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  position: relative;
+  
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 95vw;
+  height: 80vh; /* Leave room at the bottom */
+}
+
+.photostrip-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 100%;
+  max-height: 75vh;
+}
+
+.photostrip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.controls-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #ff4081;
+  color: white;
+  transition: 0.3s ease;
+  width: 180px;
+  text-align: center;
+}
+
+button:hover {
+  background: #e91e63;
+}
+
+#saveButton {
+  background: #4CAF50;
+}
+
+#saveButton:hover {
+  background: #388E3C;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+canvas {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  z-index: 100;
+}
+
+.back-button:hover {
+  background: #ddd;
+}
+
+#frameColor {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  margin-left: 10px;
+}
+
+#frameColor:hover {
+  border-color: #ff4081;
+}
+
+
+#frameColor::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: 5px;
+}
+
+#frameColor::-webkit-color-swatch {
+  border: none;
+  border-radius: 5px;
+}
+
+h2 {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
