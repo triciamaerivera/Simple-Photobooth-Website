@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     navigator.mediaDevices
       .getUserMedia({
-        video: { width: { ideal: 9999 }, height: { ideal: 9999 } },
+        video: true
       })
       .then((stream) => {
         video.srcObject = stream;
